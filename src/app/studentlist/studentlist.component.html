@@ -1,0 +1,30 @@
+
+<div class="container">
+    <h2>{{title}}</h2>
+      <table class="rwd-table">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>AUTHOR</th>
+                <th>DESCRIPTION</th>
+                <th colspan="2">ACTION</th>
+              </tr>
+              <tr *ngFor = "let student of studentList">
+                <td>{{student.id}}</td>
+                <td>{{student.title}}</td>
+                <td>{{student.author}}</td>
+                <td>{{student.description}}</td>
+                <td><button class="btn btn-danger" (click)= "deleteBook(student.id)">Delete</button></td>
+               
+                <td><button class="btn btn-warning" routerLink="update" id="sid" value= "{{student.id}}">Update</button></td>
+                
+            </tr> 
+          
+         
+            
+          
+        </tbody>
+      </table>
+      <h3>Previous Next</h3>
+    </div>
